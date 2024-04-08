@@ -48,11 +48,19 @@ const scores = ref([
         axisName: {
           shape: 'circle',
           formatter: function (value, indicator) {
-            return `{name|${value}}\n{value|${indicator.value}}`;
+            return `{image|}\n{name|${value}}\n{value|${indicator.value}}`;
           },
           color: '#000',
           textAlign: 'center',
           rich: {
+            image: {
+              height: 25,
+              width: 25,
+              backgroundColor: {
+                image: 'https://echarts.apache.org/examples/data/asset/img/weather/cloudy_128.png'
+              },
+              align: 'center'
+            },
             value: {
               color: '#4B2396',
               fontWeight: 700,
